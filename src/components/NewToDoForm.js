@@ -25,22 +25,24 @@ function NewToDoForm(props) {
       <form>
         <div className='mb-3'>
           <label className='form-label'>Task Name</label>
-          <input
+          <textarea
             onChange={taskNameChange}
             type='text'
             className='form-control'
+            rows={2}
             value={taskName}
             required
           />
         </div>
         <div>
           <label className='form-label'>Assigned To:</label>
-          <textarea
+          <input
             onChange={assigneeChange}
             className='form-control'
             rows={2}
             value={assignee}
-            required></textarea>
+            required
+          />
         </div>
         <button
           type='button'

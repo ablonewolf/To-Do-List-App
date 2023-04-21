@@ -14,6 +14,7 @@ function TodoTable(props) {
         {props.toDos.map((todo) => {
           return (
             <ToDoRowItem
+              key={todo.rowNumber}
               rowNumber={todo.rowNumber}
               taskName={todo.taskName}
               taskAssignee={todo.taskAssignee}

@@ -12,15 +12,19 @@ function App() {
   ]);
 
   const addTodo = (taskName, assigned) => {
+    let rowNumber = 0;
     if (toDos.length > 0) {
-      const newToDo = {
-        rowNumber: toDos.length + 1,
-        taskName: taskName,
-        taskAssignee: assigned
-      };
-
-      setToDos((toDos) => [...toDos, newToDo]);
+      rowNumber = toDos[toDos.length - 1].rowNumber + 1;
+    } else {
+      rowNumber = 1;
     }
+    const newToDo = {
+      rowNumber: rowNumber,
+      taskName: taskName,
+      taskAssignee: assigned
+    };
+
+    setToDos((toDos) => [...toDos, newToDo]);
   };
 
   return (
