@@ -1,9 +1,9 @@
-function ToDoRowItem() {
+function ToDoRowItem(props) {
   return (
     <tr>
-      <th scope='row'>1</th>
-      <td>Learn React</td>
-      <td>Arka</td>
+      <th scope='row'>{props.rowNumber}</th>
+      <td>{props.taskName}</td>
+      <td>{props.taskAssignee}</td>
     </tr>
   );
 }
