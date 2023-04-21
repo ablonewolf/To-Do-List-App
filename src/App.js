@@ -2,13 +2,14 @@ import './App.css';
 import TodoTable from './components/TodoTable';
 import React, { useState } from 'react';
 
-const toDos = [
-  { rowNumber: 1, taskName: 'Learn React', taskAssignee: 'Arka' },
-  { rowNumber: 2, taskName: 'Revise Python', taskAssignee: 'Arka' },
-  { rowNumber: 3, taskName: 'Learn Flask', taskAssignee: 'Arka' },
-  { rowNumber: 4, taskName: 'Learn Django', taskAssignee: 'Arka' }
-];
 function App() {
+  const [toDos, setToDos] = useState([
+    { rowNumber: 1, taskName: 'Learn React', taskAssignee: 'Arka' },
+    { rowNumber: 2, taskName: 'Revise Python', taskAssignee: 'Arka' },
+    { rowNumber: 3, taskName: 'Learn Flask', taskAssignee: 'Arka' },
+    { rowNumber: 4, taskName: 'Learn Django', taskAssignee: 'Arka' }
+  ]);
+
   const addTodo = () => {
     if (toDos.length > 0) {
       const newToDo = {
@@ -17,8 +18,7 @@ function App() {
         taskAssignee: 'Arka'
       };
 
-      toDos.push(newToDo);
-      console.log(toDos);
+      setToDos((toDos) => [...toDos, newToDo]);
     }
   };
 
