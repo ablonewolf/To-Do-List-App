@@ -1,5 +1,6 @@
 import './App.css';
 import TodoTable from './components/TodoTable';
+import NewToDoForm from './components/NewToDoForm';
 import React, { useState } from 'react';
 
 function App() {
@@ -10,12 +11,12 @@ function App() {
     { rowNumber: 4, taskName: 'Learn Django', taskAssignee: 'Arka' }
   ]);
 
-  const addTodo = () => {
+  const addTodo = (taskName, assigned) => {
     if (toDos.length > 0) {
       const newToDo = {
         rowNumber: toDos.length + 1,
-        taskName: 'New Task',
-        taskAssignee: 'Arka'
+        taskName: taskName,
+        taskAssignee: assigned
       };
 
       setToDos((toDos) => [...toDos, newToDo]);
@@ -28,9 +29,7 @@ function App() {
         <div className='card-header'>Your Todo's List</div>
         <div className='card-body'>
           <TodoTable toDos={toDos} />
-          <button className='btn btn-primary' onClick={addTodo}>
-            Add new To-Do Item
-          </button>
+          <NewToDoForm addTodo={addTodo} />
         </div>
       </div>
     </div>
