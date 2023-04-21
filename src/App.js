@@ -5,9 +5,7 @@ function App() {
   return (
     <div>
       <div>
-        <div>
-          Your Todo's List
-        </div>
+        <div>Your Todo's List</div>
         <div>
           <table border='1'>
             <thead>
@@ -25,6 +23,16 @@ function App() {
               </tr>
               <tr>
                 <th scope='row'>2</th>
+                <td>Revise Python</td>
+                <td>Arka</td>
+              </tr>
+              <tr>
+                <th scope='row'>3</th>
+                <td>Learn Flask</td>
+                <td>Arka</td>
+              </tr>
+              <tr>
+                <th scope='row'>4</th>
                 <td>Learn Django</td>
                 <td>Arka</td>
               </tr>
