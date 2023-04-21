@@ -51,7 +51,9 @@ function App() {
           <button
             onClick={() => setShowAddNewTodoForm(!showAddNewTodoForm)}
             className='btn btn-primary'>
-            {!showAddNewTodoForm ? 'Show Form to Add To Do' : 'Hide the Form'}
+            {!showAddNewTodoForm
+              ? 'Show the Form to Add ToDo'
+              : 'Hide the Form'}
           </button>
 
           {showAddNewTodoForm && <NewToDoForm addTodo={addTodo} />}
