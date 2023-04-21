@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 
 function App() {
   const [toDos, setToDos] = useState([]);
+  const [showAddNewTodoForm, setShowAddNewTodoForm] = useState(false);
 
   const addTodo = (taskName, assigned) => {
     let rowNumber = 0;
@@ -41,9 +42,19 @@ function App() {
       <div className='card'>
         <div className='card-header'>Your Todo's List</div>
         <div className='card-body'>
-          <TodoTable toDos={toDos} deleteToDo={deleteToDo} />
+          {toDos.length > 0 && (
+            <TodoTable toDos={toDos} deleteToDo={deleteToDo} />
+          )}
+          {toDos.length === 0 && (
+            <div className='card-title'>Empty Todos List. Please Add Item</div>
+          )}
+          <button
+            onClick={() => setShowAddNewTodoForm(!showAddNewTodoForm)}
+            className='btn btn-primary'>
+            {!showAddNewTodoForm ? 'Show Form to Add To Do' : 'Hide the Form'}
+          </button>
 
-          <NewToDoForm addTodo={addTodo} />
+          {showAddNewTodoForm && <NewToDoForm addTodo={addTodo} />}
         </div>
       </div>
     </div>
