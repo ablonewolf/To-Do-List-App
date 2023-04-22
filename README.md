@@ -1,3 +1,3 @@
-# Getting Started with React Library using an application named To-Do-List
+# To-Do-List-App
 
-This react application was created to kick of my journey with react library. I will be creating a simple web application. It will be much like a web version of to-do list applicaiton.
+This is a To-do-List web application developed using React and Bootstrap. 
