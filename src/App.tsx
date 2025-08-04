@@ -1,6 +1,6 @@
 import './App.css';
 import TodoTable from './components/TodoTable';
-import NewToDoForm from './components/NewToDoForm';
+import {NewToDoForm} from './components/NewToDoForm';
 import { Todo } from './models/Todo';
 import React, { useState } from 'react';
 

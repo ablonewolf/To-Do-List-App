@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const NewToDoForm: React.FC<{
+export const NewToDoForm: React.FC<{
 	addToDo: Function;
 	setShowAddNewTodoForm: Function;
 }> = (props) => {
@@ -48,5 +48,3 @@ const NewToDoForm: React.FC<{
 		</div>
 	);
 };
-
-export default NewToDoForm;
